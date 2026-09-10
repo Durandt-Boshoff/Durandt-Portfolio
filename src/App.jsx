@@ -1,13 +1,11 @@
 import Navbar from "./components/navbar";
+import Home from "./components/home";
 
 function App() {
   return (
     <>
       <Navbar />
-
-      <main>
-        <h1>My Portfolio</h1>
-      </main>
+      <Home />
     </>
   )
 }
