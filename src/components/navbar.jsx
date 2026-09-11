@@ -1,6 +1,11 @@
+import { useState } from "react"
+
 function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false)
     return (
-        <nav className="w-full px-8 py-4 flex items-center justify-between">
+        <nav className="w-full px-8 py-4">
+
+            <div className="hidden md:flex items-center justify-between">
 
             {/* Left: Name */}
             <div>
@@ -38,6 +43,52 @@ function Navbar() {
                     Button
                 </button>
             </div>
+
+            </div>
+
+            <div className="md:hidden flex items-center justify-between">
+
+                <h1 className="text-2xl font-bold">
+                    Portfolio
+                </h1>
+
+                <button 
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className="text-2xl">
+                    {menuOpen ? "✖" : "☰"}
+                    </button>
+
+            </div>
+
+            {menuOpen && (
+                <div className="md:hdden flex flex-col items-center gap-4 py-6">
+
+                    <a href="#home" onClick={() => setMenuOpen(false)}>
+                        Home
+                    </a>
+
+                    <a href="#about" onClick={() => setMenuOpen(false)}>
+                        About
+                    </a>
+
+                    <a href="#skills" onClick={() => setMenuOpen(false)}>
+                        Skills
+                    </a>
+
+                    <a href="#projects" onClick={() => setMenuOpen(false)}>
+                        Projects
+                    </a>
+
+                    <a href="#contact" onClick={() => setMenuOpen(false)}>
+                        Contact
+                    </a>
+
+                    <button className="px-5 py-2 rounded-lg bg-[var(--secondary)]">
+                        Button
+                    </button>
+
+                </div>
+            )}
 
         </nav>
     )
