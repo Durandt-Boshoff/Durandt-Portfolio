@@ -21,7 +21,7 @@ function Contact() {
 
                         <textarea placeholder="Your Idea" rows="7" className="w-full px-4 py-3 rounded-lg border-2 border-[var(--secondary)] bg-[var(--background)] outline-none focus:border-[var(--primary)] rezise-none" />
 
-                        <button type="submit" className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--background)] font-semibold hover:opacity-80 transition">
+                        <button type="submit" className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] hover:text-[var(--background)] transition">
                             Send Idea
                         </button>
 

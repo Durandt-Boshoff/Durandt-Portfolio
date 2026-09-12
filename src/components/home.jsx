@@ -24,11 +24,11 @@ function Home() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-10">
-                    <a href="#projects" className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] transition">
+                    <a href="#projects" className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] hover:text-[var(--background)] transition">
                         My Projects
                     </a>
 
-                    <a href="#contact" className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] transition">
+                    <a href="#contact" className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] hover:text-[var(--background)] transition">
                         Contact Me
                     </a>
                 </div>
