@@ -4,7 +4,7 @@ function Home() {
     return (
         <section 
             id="home"
-            className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-16 px-8 md:px-16 py-16 border-2 border-[var(--primary)] rounded-3xl m-4 md:m-8">
+            className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-16 px-8 md:px-16 py-16 border-2 border-[var(--primary)] rounded-3xl m-4 md:m-8 pt-20">
 
             {/* left: picture */}
             <div>
