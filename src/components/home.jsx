@@ -16,7 +16,7 @@ function Home() {
             {/* right: info */}
             <div className="max-w-lg text-center md:text-left">
                 <h1 className="text-5xl md:text-7xl font-bold">
-                    Durandt Boshoff
+                    Johannes Durandt Boshoff
                 </h1>
 
                 <p className="mt-6 text-lg md:text-xl leading-relaxed">
