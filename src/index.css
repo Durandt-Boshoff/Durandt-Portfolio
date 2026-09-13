@@ -8,6 +8,13 @@
   --secondary: #c6b7be;
 }
 
+.dark {
+  --background: #2d162c;
+  --text: #bca9c4;
+  --primary: #412752;
+  --secondary: #683a68;
+}
+
 body {
   margin: 0;
   font-family: 'EB Garamond', serif;

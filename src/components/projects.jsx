@@ -50,9 +50,9 @@ function Projects() {
                             </span>
                         </div>
 
-                        <a href="https://woodlandclock.netlify.app/" target="blank" rel="noopener noreferror"
+                        <a href="https://woodlandclock.netlify.app/" target="-blank" rel="noopener noreferrer"
                             className="inline-block mt-6 px-5 py-2 rounded-lg bg-[var(--primary)] text-[var(--background)] font-semibold hover:opacity-80 transition">
-                                View Project ↗
+                                View Project <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                             </a>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ function Projects() {
 
                 {/* Team Portfolio */}
                 <div className="md:col-start-3 md:row-start-1 border-2 border-[var(--secondary)] rounded-2xl overflow-hidden">
-                    <img src={TeamPortfolio} alt="Team Portfolio" className="w-full h-48 object-cover" />
+                    <img src={TeamPortfolio} alt="Team Portfolio" className="w-full h-48 object-contain bg-white p-2" />
                     <div className="p-6">
                         <h3 className="text-2xl font-bold">
                             Team Portfolio
@@ -82,9 +82,9 @@ function Projects() {
                             </span>
                         </div>
 
-                        <a href="https://teamtechtitans.netlify.app/" target="blank" rel="noopener noreferror"
+                        <a href="https://teamtechtitans.netlify.app/" target="-blank" rel="noopener noreferrer"
                             className="inline-block mt-5 px-5 py-2 rounded-lg bg-[var(--primary)] text-[var(--background)] font-semibold hover:opacity-80 transition">
-                            View Project ↗
+                            View Project <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -112,9 +112,9 @@ function Projects() {
                             </span>
                         </div>
 
-                        <a href="https://quizversebuilder.netlify.app/" target="blank" rel="noopener noreferror"
+                        <a href="https://quizversebuilder.netlify.app/" target="-blank" rel="noopener noreferrer"
                             className="inline-block mt-5 px-5 py-2 rounded-lg bg-[var(--primary)] text-[var(--background)] font-semibold hover:opacity-80 transition">
-                            View Project ↗
+                            View Project <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                         </a>
                     </div>
                 </div>

@@ -1,7 +1,21 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [darkMode, setDarkMode] = useState(() => {
+        return localStorage.getItem("theme") === "dark"
+    })
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode)
+    }
+
+    useEffect(() => {
+        document.documentElement.classList.toggle("dark", darkMode)
+
+        localStorage.setItem("theme", darkMode ? "dark" : "light")
+    }, [darkMode])
+    
     return (
         <nav className="fixed top-0 left-0 z-50 bg-[var(--background)] w-full px-8 py-4 border-b-2 border-[var(--secondary)]">
 
@@ -39,8 +53,8 @@ function Navbar() {
 
             {/* Right: Extra button */}
             <div>
-                <button className="px-5 py-2 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] transition">
-                    Button
+                <button onClick={toggleDarkMode} className="px-5 py-2 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] transition">
+                    {darkMode ? "☀️" : "🌙"}
                 </button>
             </div>
 
@@ -83,8 +97,13 @@ function Navbar() {
                         Contact
                     </a>
 
-                    <button className="px-5 py-2 rounded-lg bg-[var(--secondary)]">
-                        Button
+                    <button 
+                        onClick={() => { 
+                            toggleDarkMode() 
+                            setMenuOpen(false)}}
+                        className="px-5 py-2 rounded-lg bg-[var(--secondary)]"
+                    >
+                        {darkMode ? "☀️" : "🌙"}
                     </button>
 
                 </div>

@@ -1,4 +1,7 @@
+import { useForm, ValidationError } from "@formspree/react"
+
 function Contact() {
+    const [state, handleSubmit] = useForm("xnpqkjob")
     return (
         <section id="contact" className="min-h-screen px-8 md:px-16 py-16">
             <h2 className="text-4xl md:text-5xl font-bold text-center">
@@ -13,19 +16,35 @@ function Contact() {
 
                 {/* Contact form */}
                 <div>
-                    <form className="flex flex-col gap-6">
+                    {state.succeeded ? (
+                        <div className="p-8 rounded-2xl border-2 border-[var(--primary)]">
+                            <h3 className="text-3xl font-bold">
+                                Message Sent!
+                            </h3>
 
-                        <input type="text" placeholder="Your Name" className="w-full px-4 py-3 rounded-lg border-2 border-[var(--secondary)] bg-[var(--background)] outline-none focus:border-[var(--primary)]" />
+                            <p className="mt-4 text-lg leading-relaxed">
+                                Thanks for reaching out. I'll get back to you soon.
+                            </p>
+                        </div>
 
-                        <input type="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-lg border-2 border-[var(--secondary)] bg-[var(--background)] outline-none focus:border-[var(--primary)]" />
+                    ) : (
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
 
-                        <textarea placeholder="Your Idea" rows="7" className="w-full px-4 py-3 rounded-lg border-2 border-[var(--secondary)] bg-[var(--background)] outline-none focus:border-[var(--primary)] rezise-none" />
+                        <input type="text" name="name" placeholder="Your Name" required className="w-full px-4 py-3 rounded-lg border-2 border-[var(--secondary)] bg-[var(--background)] outline-none focus:border-[var(--primary)]" />
+                        <ValidationError prefix="Name" field="name" errors={state.errors} />
 
-                        <button type="submit" className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] hover:text-[var(--background)] transition">
-                            Send Idea
+                        <input type="email" name="email" placeholder="Your Email" required className="w-full px-4 py-3 rounded-lg border-2 border-[var(--secondary)] bg-[var(--background)] outline-none focus:border-[var(--primary)]" />
+                        <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+                        <textarea name="message" placeholder="Your Idea" rows="7" required className="w-full px-4 py-3 rounded-lg border-2 border-[var(--secondary)] bg-[var(--background)] outline-none focus:border-[var(--primary)] rezise-none" />
+                        <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+                        <button type="submit" disabled={state.submitting} className="px-6 py-3 rounded-lg bg-[var(--secondary)] text-[var(--text)] font-semibold hover:bg-[var(--primary)] hover:text-[var(--background)] transition disabled:opacity-50">
+                            {state.submitting ? "Sending..." : "Send Message"}
                         </button>
 
                     </form>
+                    )}
                 </div>
 
                 {/* Contact Information */}
@@ -37,15 +56,18 @@ function Contact() {
                     <div className="flex flex-col gap-5 mt-8">
 
                         <a href="mailto: durandt07@gmail.com" className="text-lg hover:text-[var(--primary)] transition">
-                            ✉️ durandt07@gmail.com
+                            <i className="fa-solid fa-envelope"></i>
+                            durandt07@gmail.com
                         </a>
 
                         <a href="https://www.linkedin.com/in/durandt-boshoff-795b123b6/" className="text-lg hover:text-[var(--primary)] transition">
-                            💼 LinkedIn
+                            <i className="fa-brands fa-linkedin"></i>
+                            LinkedIn
                         </a>
 
                         <a href="https://github.com/Durandt-Boshoff" className="text-lg hover:text-[var(--primary)] transition">
-                            💻 GitHub
+                            <i className="fa-brands fa-github"></i>
+                            GitHub
                         </a>
 
                     </div>
