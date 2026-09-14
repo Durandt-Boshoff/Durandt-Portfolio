@@ -20,9 +20,7 @@ function Projects() {
                         </h3>
 
                         <p className="mt-4 text-lg leading-relaxed">
-                            A responsive digital clock built with HTML, CSS, and JavaScript.
-                            The project displays the current time, date, and day while
-                            adapting its visuals depending on the time of day.
+                            A responsive digital clock built with HTML, CSS, and JavaScript. The project displays the current time, date, and day while adapting its visuals depending on the time of day. The project follows a natural theme showing a lushful forest during the day and after 6 pm it transition into a quiet forest night.
                         </p>
 
                         <div className="mt-6">
@@ -31,8 +29,10 @@ function Projects() {
                             </h4>
 
                             <ul className="mt-3 list-disc list-inside space-y-1">
-                                <li>12-hour and 24-hour time formats</li>
-                                <li>Current date and day display</li>
+                                <li>12-hour time format</li>
+                                <li>24-hour time format</li>
+                                <li>Current date display</li>
+                                <li>Current day display</li>
                                 <li>Day, night, and automatic visual modes</li>
                                 <li>Responsive design</li>
                             </ul>

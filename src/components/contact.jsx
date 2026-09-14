@@ -9,7 +9,10 @@ function Contact() {
             </h2>
 
             <p className="text-lg md:text-xl text-center mt-4 max-w-3xl mx-auto">
-                Paragraph PLACEHOLDER
+                Have a question, an idea, or just want to say hello?
+
+                I’d love to hear from you. Whether you’re interested in working together, want to talk about one of my projects, or simply want to connect, feel free to send me a message.
+
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto mt-16">

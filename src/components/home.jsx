@@ -20,7 +20,8 @@ function Home() {
                 </h1>
 
                 <p className="mt-6 text-lg md:text-xl leading-relaxed">
-                    PARAGRAPH PLACEHOLDER TEXT GOES HERE
+                    I’m a passionate and curious developer who enjoys turning creative ideas into interactive experiences. I’m currently building my skills in web development while exploring my growing interest in game development. I love learning through hands-on projects, experimenting with new ideas, and solving problems along the way, always looking for new challenges that help me grow and create something people can enjoy.
+
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-10">
